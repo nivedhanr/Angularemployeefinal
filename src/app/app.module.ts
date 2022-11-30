@@ -12,6 +12,7 @@ import { EmpregisterComponent } from './empregister/empregister.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
 import { FormsModule } from '@angular/forms';
+import { AddfriendComponent } from './addfriend/addfriend.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     EmployeeComponent,
     EmpregisterComponent,
     AdminComponent,
-    AddcourseComponent
+    AddcourseComponent,
+    AddfriendComponent
   ],
   imports: [
     BrowserModule,
