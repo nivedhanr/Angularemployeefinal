@@ -19,6 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 import { NavbaremployeeComponent } from './navbaremployee/navbaremployee.component';
+import { HttpClientModule } from '@angular/common/http';
 const myRoute: Routes=[
   {
    path:"",
@@ -96,7 +97,8 @@ const myRoute: Routes=[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
