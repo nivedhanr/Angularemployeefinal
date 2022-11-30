@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmpregisterComponent } from './empregister/empregister.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddcourseComponent } from './addcourse/addcourse.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { AdminComponent } from './admin/admin.component';
     AboutComponent,
     EmployeeComponent,
     EmpregisterComponent,
-    AdminComponent
+    AdminComponent,
+    AddcourseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
