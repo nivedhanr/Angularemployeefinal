@@ -30,6 +30,6 @@ data:any=[
 },
 {
   "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5g85qUHHA1pWZegvDdfdXJ8McD1iMSxz8ZHYyNY13is62DrGIHMSw6HQdApOHCWrsLLI&usqp=CAU"
-},
+}
 ]
 }
