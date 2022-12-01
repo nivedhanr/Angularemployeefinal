@@ -4,18 +4,47 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 g-4 mt-4 text-center">
             <div class="row g-4 mt-4">
                 
-                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 g-3 mt-3 " *ngFor="let i of data">
-                    <div class="card" style="width: 30rem;">
-                        <div class="card-body">
-                          <!--<img src="{{j.gallary}}" class="card-img-top" alt="...">-->
-                            
-                          <h5 class="card-text">Name:{{i.name}}</h5>
-                          <h6 class="card-text">Friend Name:{{i.friendName}}</h6>
-                          <h6 class="card-text">Friend NickName:{{i.friendNickName}}</h6>
-                          <p class="card-text">Describe Your Friend:{{i.DescribeYourFriend}}</p>
-                          </div>
+                <ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
+                <ng-template #loadingScreen>
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
                       </div>
-                </div>
+                      <div class="spinner-grow text-secondary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-warning" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-info" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-dark" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                </ng-template>
+                <ng-template #dataScreen>
+                    <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 g-3 mt-3 " *ngFor="let i of data">
+                        <div class="card" style="width: 30rem;">
+                            <div class="card-body">
+                              <!--<img src="{{j.gallary}}" class="card-img-top" alt="...">-->
+                                
+                              <h5 class="card-text">Name:{{i.name}}</h5>
+                              <h6 class="card-text">Friend Name:{{i.friendName}}</h6>
+                              <h6 class="card-text">Friend NickName:{{i.friendNickName}}</h6>
+                              <p class="card-text">Describe Your Friend:{{i.DescribeYourFriend}}</p>
+                              </div>
+                          </div>
+                    </div>
+                </ng-template>
             </div>
         </div>
     </div>
